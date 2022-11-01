@@ -1,9 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	width: 100vw;
+	overflow-x: hidden;
 }
 
 a {
@@ -13,14 +19,46 @@ a {
 
 * {
   box-sizing: border-box;
+	transition: all .2s;
+
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     color: white;
-    background: black;
-  }
+    background: white;
+	}
+}
+
+p {
+	color: #1F1F30;
+	opacity: .8;
+}
+
+.button {
+	color: white;
+	padding: 13px 20px;
+	background: #1F1F30;
+	border-radius: 9999px;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.button--white {
+	background: white;
+	color: #1F1F30;
+}
+
+.button--small {
+	padding: 9px 20px;
+	font-size: 14px;
+}
+
+.button--outline {
+	border: 1.5px solid #1F1F3090;
+	color: #1F1F30;
+	background: transparent;
 }
