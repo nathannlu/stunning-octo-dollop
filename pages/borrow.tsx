@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import NumberIcon from '../components/NumberIcon';
+import Script from 'next/script';
 
 const Borrower = () => {
 	const [selectedItem, setSelectedItem] = useState(0);
@@ -14,6 +15,8 @@ const Borrower = () => {
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+
       </Head>
 			<header style={{
 				background: '#0052FF'
@@ -149,6 +152,12 @@ const Borrower = () => {
 					</Link>
 				</div>
 			</footer>
+			<Script 
+				id="twitter-pixel"
+				dangerouslySetInnerHTML={{
+					__html: `!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');twq('config','ocql0');`
+				}}
+			/>
 		</>
 	)
 }
